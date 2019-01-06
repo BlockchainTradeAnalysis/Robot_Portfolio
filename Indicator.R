@@ -6,6 +6,8 @@ stock = "BTCUSD=X"
 #"2010-07-18::2018-12-31"
 
 STK = as.matrix(na.omit(get(getSymbols(stock))),keep.rownames = TRUE)
+
+
 #扣掉最後兩筆資料
 Cl_STK = Cl(STK)[-(nrow(STK)-1):-nrow(STK)]
 Op_STK = Op(STK)[-(nrow(STK)-1):-nrow(STK)]
